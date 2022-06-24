@@ -6,3 +6,16 @@ const guessNumberContainer = document.getElementById(
 const guessGuessContainer = document.getElementById(
   'table-of-guesses-guess-guess'
 );
+
+document.readyState === 'interactive' &&
+  function () {
+    document
+      .querySelector(window)
+      .scroll(function () {
+        document.querySelector('.right').style.transform =
+          'translate3d(0,' +
+          document.querySelector(this).scrollTop * 2 +
+          'px, 0)';
+      })
+      .scroll();
+  };

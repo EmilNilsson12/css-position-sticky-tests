@@ -6,21 +6,580 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <title>Document</title>
   </head>
   <body>
-    <h1>Think of a number between 0 and 100</h1>
-    <p>Is it higher or lower than</p>
-    <p id="current-guess"></p>
-    <div>
-      <p><button>Higher</button></p>
-      <p><button>Lower</button></p>
-      <p><button>You guessed correct</button></p>
-    </div>
-    <table id="table-of-guesses">
-      <tr id="table-of-guesses-guess-number"></tr>
-      <tr id="table-of-guesses-guess-guess"></tr>
-    </table>
+    <main>
+      <h1>Scroll and enjoy</h1>
+
+      <section>
+        <h2>Tetris grid</h2>
+        <div class="tetris-grid">
+          <!-- L-block 1 -->
+          <div class="l-block l-block-1 l-block-1-1"></div>
+          <div class="l-block l-block-1 l-block-1-2"></div>
+          <div class="l-block l-block-1 l-block-1-3"></div>
+          <div class="l-block l-block-1 l-block-1-4"></div>
+          <!-- L-block 1 -->
+
+          <!-- Z-block 1 -->
+          <div class="z-block z-block-1 z-block-1-1"></div>
+          <div class="z-block z-block-1 z-block-1-2"></div>
+          <div class="z-block z-block-1 z-block-1-3"></div>
+          <div class="z-block z-block-1 z-block-1-4"></div>
+          <!-- Z-block 1 -->
+
+          <!-- L-block 1 -->
+          <div class="l-block l-block-2 l-block-2-1"></div>
+          <div class="l-block l-block-2 l-block-2-2"></div>
+          <div class="l-block l-block-2 l-block-2-3"></div>
+          <div class="l-block l-block-2 l-block-2-4"></div>
+          <!-- L-block 2 -->
+
+          <!-- T-block 1 -->
+          <div class="t-block t-block-1 t-block-1-1"></div>
+          <div class="t-block t-block-1 t-block-1-2"></div>
+          <div class="t-block t-block-1 t-block-1-3"></div>
+          <div class="t-block t-block-1 t-block-1-4"></div>
+          <!-- T-block 2 -->
+          <!-- T-block 1 -->
+          <div class="t-block t-block-2 t-block-2-1"></div>
+          <div class="t-block t-block-2 t-block-2-2"></div>
+          <div class="t-block t-block-2 t-block-2-3"></div>
+          <div class="t-block t-block-2 t-block-2-4"></div>
+          <!-- T-block 2 -->
+
+          <!-- i-block 1 -->
+          <div class="i-block i-block-1 i-block-1-1"></div>
+          <div class="i-block i-block-1 i-block-1-2"></div>
+          <div class="i-block i-block-1 i-block-1-3"></div>
+          <div class="i-block i-block-1 i-block-1-4"></div>
+          <!-- i-block 1 -->
+
+          <!-- L-block 3 -->
+          <div class="l-block l-block-3 l-block-3-1"></div>
+          <div class="l-block l-block-3 l-block-3-2"></div>
+          <div class="l-block l-block-3 l-block-3-3"></div>
+          <div class="l-block l-block-3 l-block-3-4"></div>
+          <!-- L-block 3 -->
+
+          <!-- Z-block 1 -->
+          <div class="z-block z-block-2 z-block-2-1"></div>
+          <div class="z-block z-block-2 z-block-2-2"></div>
+          <div class="z-block z-block-2 z-block-2-3"></div>
+          <div class="z-block z-block-2 z-block-2-4"></div>
+          <!-- Z-block 1 -->
+
+          <!-- Z-block 1 -->
+          <div class="z-block z-block-3 z-block-3-1"></div>
+          <div class="z-block z-block-3 z-block-3-2"></div>
+          <div class="z-block z-block-3 z-block-3-3"></div>
+          <div class="z-block z-block-3 z-block-3-4"></div>
+          <!-- Z-block 1 -->
+
+          <!-- L-block 4 -->
+          <div class="l-block l-block-4 l-block-4-1"></div>
+          <div class="l-block l-block-4 l-block-4-2"></div>
+          <div class="l-block l-block-4 l-block-4-3"></div>
+          <div class="l-block l-block-4 l-block-4-4"></div>
+          <!-- L-block 4 -->
+
+          <!-- Z-block 1 -->
+          <div class="z-block z-block-4 z-block-4-1"></div>
+          <div class="z-block z-block-4 z-block-4-2"></div>
+          <div class="z-block z-block-4 z-block-4-3"></div>
+          <div class="z-block z-block-4 z-block-4-4"></div>
+          <!-- Z-block 1 -->
+
+          <!-- L-block 4 -->
+          <div class="l-block l-block-5 l-block-5-1"></div>
+          <div class="l-block l-block-5 l-block-5-2"></div>
+          <div class="l-block l-block-5 l-block-5-3"></div>
+          <div class="l-block l-block-5 l-block-5-4"></div>
+          <!-- L-block 4 -->
+
+          <!-- Z-block 1 -->
+          <div class="z-block z-block-5 z-block-5-1"></div>
+          <div class="z-block z-block-5 z-block-5-2"></div>
+          <div class="z-block z-block-5 z-block-5-3"></div>
+          <div class="z-block z-block-5 z-block-5-4"></div>
+          <!-- Z-block 1 -->
+
+          <!-- Z-block 1 -->
+          <div class="z-block z-block-6 z-block-6-1"></div>
+          <div class="z-block z-block-6 z-block-6-2"></div>
+          <div class="z-block z-block-6 z-block-6-3"></div>
+          <div class="z-block z-block-6 z-block-6-4"></div>
+          <!-- Z-block 1 -->
+
+          <!-- Z-block 1 -->
+          <div class="z-block z-block-7 z-block-7-1"></div>
+          <div class="z-block z-block-7 z-block-7-2"></div>
+          <div class="z-block z-block-7 z-block-7-3"></div>
+          <div class="z-block z-block-7 z-block-7-4"></div>
+          <!-- Z-block 1 -->
+
+          <!-- L-block 4 -->
+          <div class="l-block l-block-6 l-block-6-1"></div>
+          <div class="l-block l-block-6 l-block-6-2"></div>
+          <div class="l-block l-block-6 l-block-6-3"></div>
+          <div class="l-block l-block-6 l-block-6-4"></div>
+          <!-- L-block 4 -->
+
+          <!-- L-block 1 -->
+          <div class="l-block l-block-7 l-block-7-1"></div>
+          <div class="l-block l-block-7 l-block-7-2"></div>
+          <div class="l-block l-block-7 l-block-7-3"></div>
+          <div class="l-block l-block-7 l-block-7-4"></div>
+          <!-- L-block 1 -->
+        </div>
+      </section>
+
+      <section class="my-flex-section">
+        <h2>Hello</h2>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+        <div class="flex">
+          <p>Content1</p>
+          <p>Content2</p>
+          <p>Content3</p>
+          <p>Content4</p>
+        </div>
+      </section>
+      <section>
+        <h2>Hello</h2>
+        <p>Nothing special</p>
+      </section>
+      <section class="my-grid-section">
+        <h2>Hello</h2>
+        <div class="grid">
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+          <div class="grid-child"></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Hello</h2>
+        <p>Nothing special</p>
+      </section>
+      <section>
+        <h2>Hello</h2>
+        <p>Nothing special</p>
+      </section>
+      <section>
+        <h2>Hello</h2>
+        <p>Nothing special</p>
+      </section>
+      <section>
+        <h2>Hello</h2>
+        <p>Nothing special</p>
+      </section>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
